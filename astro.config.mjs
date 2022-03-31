@@ -1,10 +1,11 @@
 import { defineConfig } from 'astro/config';
-import preact from '@astrojs/preact';
 
-// https://astro.build/config
+import react from '@astrojs/react';
+import tailwind from '@astrojs/tailwind';
+
 export default defineConfig({
-	integrations: [preact()],
+	integrations: [react(), tailwind()],
 	buildOptions: {
-		site: 'https://example.com/',
-	},
+		sitemap: true, 
+	}
 });
